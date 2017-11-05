@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>DartsTable.qml</file>
+        <file>DartsMultiplierSlice.qml</file>
+        <file>DartsOuterSimpleSlice.qml</file>
+        <file>DartsInnerSimpleSlice.qml</file>
+        <file>DartsFullSlice.qml</file>
+        <file>DartsNumber.qml</file>
+        <file>ScoreBoard.qml</file>
+        <file>images/pattern.png</file>
+        <file>images/pattern2.png</file>
+        <file>images/dart.png</file>
+        <file>images/dart_silhouette_transparent.png</file>
+        <file>images/dart_silhouette_transparent_invert.png</file>
+        <file>images/scoreBoardCorner.png</file>
+    </qresource>
+</RCC>
