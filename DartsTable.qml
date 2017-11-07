@@ -21,7 +21,7 @@ Item {
     property string fontColor: "grey"
     property string doubleBullsEyeColor: "#D63A22"
     property string bullsEyeColor: "#31994E"
-    property string borderColor: "grey"
+    property string wireFrameColor: "grey"
     property string firstMultiplierColor: doubleBullsEyeColor
     property string secondMultiplierColor: bullsEyeColor
     property string firstSimpleColor: "black"
@@ -74,7 +74,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: containerFrame.frameColor
         radius: (fullDiameterUnit/fullDiameterUnit)*containerFrame.width
@@ -100,7 +100,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -125,7 +125,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -150,7 +150,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -175,7 +175,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -200,7 +200,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -225,7 +225,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -250,7 +250,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -275,7 +275,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -300,7 +300,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -325,7 +325,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -350,7 +350,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -375,7 +375,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -400,7 +400,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -425,7 +425,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -450,7 +450,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -475,7 +475,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -500,7 +500,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -525,7 +525,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -550,7 +550,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.firstMultiplierColor
         simpleColor: containerFrame.firstSimpleColor
     }
@@ -575,7 +575,7 @@ Item {
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
-        borderColor: containerFrame.borderColor
+        wireFrameColor: containerFrame.wireFrameColor
         multiplierColor: containerFrame.secondMultiplierColor
         simpleColor: containerFrame.secondSimpleColor
     }
@@ -593,7 +593,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: containerFrame.bullsEyeColor
         radius: (bullsEyeDiameterUnit/fullDiameterUnit)/2*containerFrame.width
@@ -611,7 +611,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: containerFrame.doubleBullsEyeColor
         radius: this.width
@@ -646,7 +646,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: containerFrame.borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: "transparent"
         radius: this.width
@@ -661,7 +661,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: containerFrame.borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: "transparent"
         radius: this.width
@@ -676,7 +676,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: containerFrame.borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: "transparent"
         radius: this.width
@@ -691,7 +691,7 @@ Item {
         y: containerFrame.centerY-this.height/2
 
         border.width: containerFrame.borderWidth
-        border.color: containerFrame.borderColor
+        border.color: containerFrame.wireFrameColor
 
         color: "transparent"
         radius: this.width
@@ -711,7 +711,7 @@ Item {
                 ctx.reset()
 
                 ctx.lineWidth = containerFrame.borderWidth
-                ctx.strokeStyle = containerFrame.borderColor
+                ctx.strokeStyle = containerFrame.wireFrameColor
 
                 ctx.translate(this.width/2, this.height/2)
                 ctx.rotate(containerFrame.angleOffset+index*2*Math.PI/containerFrame.numberOfSlices)
@@ -759,7 +759,7 @@ Item {
                 }
             }
 
-            borderColor = doubleBullsEyeColor;
+            wireFrameColor = doubleBullsEyeColor;
 
             // This lines update the radial wires too
             // ToDo: Tihs method is disgusting
@@ -795,7 +795,7 @@ Item {
                 }
             }
 
-            borderColor = doubleBullsEyeColor;
+            wireFrameColor = doubleBullsEyeColor;
 
             // This lines update the radial wires too
             // ToDo: Tihs method is disgusting

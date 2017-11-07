@@ -40,6 +40,7 @@ Window {
                     rightPadding: 450 // ToDo: from config file
 
                     text: "Game Mode" // ToDo: from actual settings
+                    font.family: "Solid Edge Stencil"
                     font.pixelSize: 40 // ToDo: from config file
                     font.bold: true // ToDo: from config file
                     color: "silver" // ToDo: from config file
@@ -61,8 +62,7 @@ Window {
                             source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
 
                             anchors.fill: parent
-                            smooth: true
-                            visible: false
+                            visible: true
                         }
                     }
 
@@ -75,8 +75,7 @@ Window {
                             source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
 
                             anchors.fill: parent
-                            smooth: false
-                            visible: false
+                            visible: true
                         }
                     }
 
@@ -89,7 +88,7 @@ Window {
                             source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
 
                             anchors.fill: parent
-                            visible: false
+                            visible: true
                         }
                     }
                 }
@@ -166,8 +165,8 @@ Window {
     SequentialAnimation {
         id: startAnimation
 
-        property int duration: 50
-        property int durationBetween: 1000
+        property int duration: 30
+        property int durationBetween: 20*duration
 
         running: true
 

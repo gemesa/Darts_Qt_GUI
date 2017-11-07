@@ -14,6 +14,7 @@
         <file>images/dart.png</file>
         <file>images/dart_silhouette_transparent.png</file>
         <file>images/dart_silhouette_transparent_invert.png</file>
-        <file>images/scoreBoardCorner.png</file>
+        <file>images/scoreBoardFrame.png</file>
+        <file>config/config.ini</file>
     </qresource>
 </RCC>

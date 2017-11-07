@@ -26,7 +26,7 @@ Item {
     property string fontColor: "black"
     property string doubleBullsEyeColor: "red"
     property string bullsEyeColor: "green"
-    property string borderColor: "grey"
+    property string wireFrameColor: "grey"
     property string multiplierColor: doubleBullsEyeColor
     property string simpleColor: "black"
 

@@ -1,0 +1,64 @@
+mainWindow
+    size:
+        fixed:
+            width: int (1700)
+            height: int (1000)
+        fullscreen: bool (false)
+    backgroundColor: color (black)
+
+gameModeText
+    topPadding: int (40)
+    sidePadding: int (450)
+    width: int (400)
+    fontFamily: string (Solid Edge Stencil)
+    fontSize: int (40)
+    fontColor: color (silver)
+    styleBold: bool (true)
+    styleItalic: bool (false)
+
+dartCounter:
+    width: int (50)
+    height: int (150)
+    image: string (images/dart_silhouette_transparent_invert.png)
+
+mainRowLayout:
+    margins: int (40)
+    spacing: int (20)
+
+scoreBoard:
+    frameWidth: int (20)
+    frameImage: string (images/scoreBoardFrame.png)
+    frameOpacity: real (1)
+    backgroundColor: color (transparent)
+    backgroundOpacity: real (1)
+    scoreSpacing: int (0)
+    playerTextWidth: int (150)
+    playerTextHeight: int (70)
+    playerTextBackgroundColor: color (transparent)
+    playerTextBackgroundOpacity: real (1)
+    playerTextFontFamily: string (Solid Edge Stencil)
+    playerTextFontSize: int (24)
+    playerTextFontColor: color (white)
+    playerFillerWidth: int (70)
+    playerFillerBackgroundColor: color (transparent)
+    playerFillerBackgroundOpacity: real (1)
+    scoreTextHeight: int (50)
+    scoreTextBorderWidth: int (1)
+    scoreTextBorderColor: color (white)
+    scoreTextBackgroundColor: color (transparent)
+    scoreTextBackgroundOpacity: real (1)
+    scoreTextFontFamily: string (Solid Edge Stencil)
+    scoreTextFontSize: int (24)
+    scoreTextFontColor: color (white)
+
+dartsTable:
+    frameColor: color (black)
+    fontFamily: string (Solid Edge Stencil)
+    fontColor: color (grey)
+    doubleBullsEyeColor: color (#D63A22)
+    bullsEyeColor: color (#31994E)
+    firstMultiplierColor: color (#D63A22)
+    secondMultiplierColor: color (#31994E)
+    firstSimpleColor: color (black)
+    secondSimpleColor: color (#F2F0B7)
+    wireFrameColor: color (grey)

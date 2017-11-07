@@ -27,13 +27,15 @@ Item {
         height: scoreBoardColumnLayout.height + 20  // ToDo: from config file
 
         color: "transparent"
+        opacity: 1  // ToDo: from config file
 
         // Corner image
         Image {
             id: cornerImage
 
             anchors.fill: parent
-            source: "images/scoreBoardCorner.png"  // ToDo: from config file
+            source: "images/scoreBoardFrame.png"  // ToDo: from config file
+            opacity: 1  // ToDo: from config file
         }
 
         Column{
@@ -45,9 +47,6 @@ Item {
             Row {
                 id: scoreBoardRowLayout
 
-                //anchors.top: mainRowLayout.top
-
-                //padding: parent.margins
                 spacing: 0  // ToDo: from config file
 
                 // ++++++++++++++++++++++++++++++++++++++++++
@@ -58,13 +57,14 @@ Item {
                     height: 70  // ToDo: from config file
 
                     color: "transparent"  // ToDo: from config file
+                    opacity: 1  // ToDo: from config file
 
                     Text {
                         anchors.fill: parent
 
                         text: scoreBoard.player1
 
-                        font.pointSize: 24
+                        font.pointSize: 24  // ToDo: from config file
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         font.family: scoreBoard.font  // ToDo: from config file
@@ -77,6 +77,7 @@ Item {
                     height: 70  // ToDo: from config file
 
                     color: "transparent"  // ToDo: from config file
+                    opacity: 1  // ToDo: from config file
                 }
 
                 Rectangle {
@@ -84,6 +85,7 @@ Item {
                     height: 70  // ToDo: from config file
 
                     color: "transparent"  // ToDo: from config file
+                    opacity: 1  // ToDo: from config file
 
                     Text {
                         anchors.fill: parent
@@ -119,6 +121,7 @@ Item {
                         border.color: "white"  // ToDo: from config file
 
                         color: "transparent"  // ToDo: from config file
+                        opacity: 1  // ToDo: from config file
 
                         Text {
                             id: score0
