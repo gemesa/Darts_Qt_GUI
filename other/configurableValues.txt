@@ -22,7 +22,6 @@ dartCounter:
     image: string (images/dart_silhouette_transparent_invert.png)
 
 mainRowLayout:
-    margins: int (40)
     spacing: int (20)
 
 scoreBoard:

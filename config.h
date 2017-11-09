@@ -13,9 +13,13 @@ public:
     void setHeight(int height);
     int getHeight();
 
+    void setFullscreen(bool fullscreen);
+    bool getFullscreen();
+
 private:
     int width;
     int height;
+    bool fullscreen;
 };
 
 class configGameModeText
@@ -203,6 +207,9 @@ class configDartsTable
 public:
     configDartsTable();
 
+    void setWidth(int width);
+    int getWidth();
+
     void setFrameColor(QString frameColor);
     QString getFrameColor();
 
@@ -234,6 +241,7 @@ public:
     QString getWireFrameColor();
 
 private:
+    int width;
     QString frameColor;
     QString fontFamily;
     QString fontColor;

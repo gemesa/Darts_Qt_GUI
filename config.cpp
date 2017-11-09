@@ -25,6 +25,16 @@ int configMainWindow::getHeight()
     return this->height;
 }
 
+void configMainWindow::setFullscreen(bool fullscreen)
+{
+    this->fullscreen = fullscreen;
+}
+
+bool configMainWindow::getFullscreen()
+{
+    return this->fullscreen;
+}
+
 configGameModeText::configGameModeText()
 {
 
@@ -418,6 +428,16 @@ QString configScoreBoard::getScoreTextFontColor()
 configDartsTable::configDartsTable()
 {
 
+}
+
+void configDartsTable::setWidth(int width)
+{
+    this->width = width;
+}
+
+int configDartsTable::getWidth()
+{
+    return this->width;
 }
 
 void configDartsTable::setFrameColor(QString frameColor)

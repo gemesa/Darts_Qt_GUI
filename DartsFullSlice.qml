@@ -23,12 +23,12 @@ Item {
     property real bullsEyeDiameter: (bullsEyeDiameterUnit/fullDiameterUnit)*fullSlice.width
 
     property string font: "Sylfaen"
-    property string fontColor: "black"
-    property string doubleBullsEyeColor: "red"
-    property string bullsEyeColor: "green"
-    property string wireFrameColor: "grey"
-    property string multiplierColor: doubleBullsEyeColor
-    property string simpleColor: "black"
+    property color fontColor: "black"
+    property color doubleBullsEyeColor: "red"
+    property color bullsEyeColor: "green"
+    property color wireFrameColor: "grey"
+    property color multiplierColor: doubleBullsEyeColor
+    property color simpleColor: "black"
 
     anchors.fill: parent
 

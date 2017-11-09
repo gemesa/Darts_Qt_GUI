@@ -17,18 +17,18 @@ Item {
     property real angleOffset: -Math.PI*(0.5+1/numberOfSlices)
 
     // Color parameters
-    property string frameColor: "black"
-    property string fontColor: "grey"
-    property string doubleBullsEyeColor: "#D63A22"
-    property string bullsEyeColor: "#31994E"
-    property string wireFrameColor: "grey"
-    property string firstMultiplierColor: doubleBullsEyeColor
-    property string secondMultiplierColor: bullsEyeColor
-    property string firstSimpleColor: "black"
-    property string secondSimpleColor: "#F2F0B7"
+    property color frameColor: "black"
+    property color fontColor: "grey"
+    property color doubleBullsEyeColor: "#D63A22"
+    property color bullsEyeColor: "#31994E"
+    property color wireFrameColor: "grey"
+    property color firstMultiplierColor: doubleBullsEyeColor
+    property color secondMultiplierColor: bullsEyeColor
+    property color firstSimpleColor: "black"
+    property color secondSimpleColor: "#F2F0B7"
 
     // Font style
-    property string font: "Algerian"
+    property string fontFamily: "Algerian"
 
     property var slices: {
                             "slice1": slice1,
@@ -96,7 +96,7 @@ Item {
         number: 0
         valueNumber: 20
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -121,7 +121,7 @@ Item {
         number: 1
         valueNumber: 1
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -146,7 +146,7 @@ Item {
         number: 2
         valueNumber: 18
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -171,7 +171,7 @@ Item {
         number: 3
         valueNumber: 4
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -196,7 +196,7 @@ Item {
         number: 4
         valueNumber: 13
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -221,7 +221,7 @@ Item {
         number: 5
         valueNumber: 6
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -246,7 +246,7 @@ Item {
         number: 6
         valueNumber: 10
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -271,7 +271,7 @@ Item {
         number: 7
         valueNumber: 15
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -296,7 +296,7 @@ Item {
         number: 8
         valueNumber: 2
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -321,7 +321,7 @@ Item {
         number: 9
         valueNumber: 17
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -346,7 +346,7 @@ Item {
         number: 10
         valueNumber: 3
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -371,7 +371,7 @@ Item {
         number: 11
         valueNumber: 19
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -396,7 +396,7 @@ Item {
         number: 12
         valueNumber: 7
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -421,7 +421,7 @@ Item {
         number: 13
         valueNumber: 16
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -446,7 +446,7 @@ Item {
         number: 14
         valueNumber: 8
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -471,7 +471,7 @@ Item {
         number: 15
         valueNumber: 11
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -496,7 +496,7 @@ Item {
         number: 16
         valueNumber: 14
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -521,7 +521,7 @@ Item {
         number: 17
         valueNumber: 9
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -546,7 +546,7 @@ Item {
         number: 18
         valueNumber: 12
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
@@ -571,7 +571,7 @@ Item {
         number: 19
         valueNumber: 5
 
-        font: containerFrame.font
+        font: containerFrame.fontFamily
         fontColor: containerFrame.fontColor
         doubleBullsEyeColor: containerFrame.doubleBullsEyeColor
         bullsEyeColor: containerFrame.bullsEyeColor
