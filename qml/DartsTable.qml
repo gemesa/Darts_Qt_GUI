@@ -16,8 +16,9 @@ Item {
     // Offset to ensure the slice positioning
     property real angleOffset: -Math.PI*(0.5+1/numberOfSlices)
 
-    // Color parameters
+    // Darts table parameters
     property color frameColor: "black"
+    property string fontFamily: "Algerian"
     property color fontColor: "grey"
     property color doubleBullsEyeColor: "#D63A22"
     property color bullsEyeColor: "#31994E"
@@ -26,9 +27,8 @@ Item {
     property color secondMultiplierColor: bullsEyeColor
     property color firstSimpleColor: "black"
     property color secondSimpleColor: "#F2F0B7"
+    property string pattern: "qrc:content/images/dartsTablePattern.png"
 
-    // Font style
-    property string fontFamily: "Algerian"
 
     property var slices: {
                             "slice1": slice1,
@@ -620,7 +620,7 @@ Item {
     // Pattern image
     Image {
         id: patternImage
-        source: "images/pattern2.png"
+        source: containerFrame.pattern
 
         width: parent.width
         height: parent.height

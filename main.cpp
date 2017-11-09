@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     settings.beginGroup("dartCounter");
     designConfig.dartCounter.setWidth(settings.value("width", 50).toInt());
     designConfig.dartCounter.setHeight(settings.value("height", 150).toInt());
-    designConfig.dartCounter.setImage(settings.value("image","images/dart_silhouette_transparent_invert.png").toString());
+    designConfig.dartCounter.setImage(settings.value("image","qrc:content/images/dart_silhouette_transparent_invert.png").toString());
     settings.endGroup();
 
     settings.beginGroup("mainRowLayout");
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
     settings.beginGroup("scoreBoard");
     designConfig.scoreBoard.setFrameWidth(settings.value("frameWidth",20).toInt());
-    designConfig.scoreBoard.setFrameImage(settings.value("frameImage","images/scoreBoardFrame.png").toString());
+    designConfig.scoreBoard.setFrameImage(settings.value("frameImage","qrc:content/images/scoreBoardFrame.png").toString());
     designConfig.scoreBoard.setFrameOpacity(settings.value("frameOpacity",1).toFloat());
     designConfig.scoreBoard.setBackgroundColor(settings.value("backgroundColor","transparent").toString());
     designConfig.scoreBoard.setBackgroundOpacity(settings.value("backgroundOpacity",1).toFloat());
@@ -82,6 +82,7 @@ int main(int argc, char *argv[])
     designConfig.dartsTable.setFirstSimpleColor(settings.value("firstSimpleColor","black").toString());
     designConfig.dartsTable.setSecondSimpleColor(settings.value("secondSimpleColor","#F2F0B7").toString());
     designConfig.dartsTable.setWireFrameColor(settings.value("wireFrameColor","grey").toString());
+    designConfig.dartsTable.setPattern(settings.value("pattern","qrc:content/images/dartsTablePattern.png").toString());
     settings.endGroup();
 
     return app.exec();

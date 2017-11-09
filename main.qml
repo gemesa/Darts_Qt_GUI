@@ -2,6 +2,8 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 
+import "qml"
+
 Window {
     id: mainWindow
     objectName: "mainWindow"
@@ -25,7 +27,7 @@ Window {
     // dartCounter properties
     property int dartCounterWidth: 50
     property int dartCounterHeight: 150
-    property string dartCounterImage: "images/dart_silhouette_transparent_invert.png"
+    property string dartCounterImage: "qrc:content/images/dart_silhouette_transparent_invert.png"
 
     // mainRowLayout properties
     property int mainRowLayoutMargins: 40
@@ -33,7 +35,7 @@ Window {
 
     // scoreBoard properties
     property int scoreBoardFrameWidth: 20
-    property string scoreBoardFrameImage: "images/scoreBoardFrame.png"
+    property string scoreBoardFrameImage: "qrc:content/images/scoreBoardFrame.png"
     property real scoreBoardFrameOpacity: 1
     property color scoreBoardBackgroundColor: "transparent"
     property real scoreBoardBackgroundOpacity: 1
@@ -69,6 +71,7 @@ Window {
     property color dartsTableSecondMultiplierColor: dartsTableBullsEyeColor
     property color dartsTableFirstSimpleColor: "black"
     property color dartsTableSecondSimpleColor: "#F2F0B7"
+    property string dartsTablePattern: "qrc:content/images/dartsTablePattern.png"
 
     property int loopVariable: 0
 
@@ -248,6 +251,7 @@ Window {
                             secondSimpleColor: mainWindow.dartsTableSecondSimpleColor
                             secondMultiplierColor: mainWindow.dartsTableSecondMultiplierColor
                             wireFrameColor: mainWindow.dartsTableWireFrameColor
+                            pattern: mainWindow.dartsTablePattern
                         }
                 }
 

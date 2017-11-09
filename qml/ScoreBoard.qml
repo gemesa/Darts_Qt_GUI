@@ -6,7 +6,7 @@ Item {
     id: scoreBoard
 
     property int frameWidth: 20
-    property string frameImage: "images/scoreBoardFrame.png"
+    property string frameImage: "../content/images/scoreBoardFrame.png"
     property real frameOpacity: 1
     property color backgroundColor: "transparent"
     property real backgroundOpacity: 1

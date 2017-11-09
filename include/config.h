@@ -240,6 +240,9 @@ public:
     void setWireFrameColor(QString wireFrameColor);
     QString getWireFrameColor();
 
+    void setPattern(QString pattern);
+    QString getPattern();
+
 private:
     int width;
     QString frameColor;
@@ -252,6 +255,7 @@ private:
     QString firstSimpleColor;
     QString secondSimpleColor;
     QString wireFrameColor;
+    QString pattern;
 };
 
 class config

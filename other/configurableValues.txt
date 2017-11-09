@@ -51,6 +51,7 @@ scoreBoard:
     scoreTextFontColor: color (white)
 
 dartsTable:
+    width: int (700)
     frameColor: color (black)
     fontFamily: string (Solid Edge Stencil)
     fontColor: color (grey)

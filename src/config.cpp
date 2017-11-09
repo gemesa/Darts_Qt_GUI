@@ -540,6 +540,16 @@ QString configDartsTable::getWireFrameColor()
     return this->wireFrameColor;
 }
 
+void configDartsTable::setPattern(QString pattern)
+{
+    this->pattern = pattern;
+}
+
+QString configDartsTable::getPattern()
+{
+    return this->pattern;
+}
+
 config::config()
 {
 
