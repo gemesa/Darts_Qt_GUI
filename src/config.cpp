@@ -25,6 +25,26 @@ int configMainWindow::getHeight()
     return this->height;
 }
 
+void configMainWindow::setFullscreen(bool fullscreen)
+{
+    this->fullscreen = fullscreen;
+}
+
+bool configMainWindow::getFullscreen()
+{
+    return this->fullscreen;
+}
+
+void configMainWindow::setBackgroundColor(QString backgroundColor)
+{
+    this->backgroundColor = backgroundColor;
+}
+
+QString configMainWindow::getBackgroundColor()
+{
+    return this->backgroundColor;
+}
+
 configGameModeText::configGameModeText()
 {
 
@@ -257,12 +277,12 @@ int configScoreBoard::getPlayerTextHeight()
 
 void configScoreBoard::setPlayerTextBackgroundColor(QString playerTextBackgroundColor)
 {
-    this->playerFillerBackgroundColor = playerTextBackgroundColor;
+    this->playerTextBackgroundColor = playerTextBackgroundColor;
 }
 
 QString configScoreBoard::getPlayerTextBackgroundColor()
 {
-    return this->playerFillerBackgroundColor;
+    return this->playerTextBackgroundColor;
 }
 
 void configScoreBoard::setPlayerTextBackgroundOpacity(float playerTextBackgroundOpacity)
@@ -272,7 +292,7 @@ void configScoreBoard::setPlayerTextBackgroundOpacity(float playerTextBackground
 
 float configScoreBoard::getPlayerTextBackgroundOpacity()
 {
-    return this->playerFillerBackgroundOpacity;
+    return this->playerTextBackgroundOpacity;
 }
 
 void configScoreBoard::setPlayerTextFontFamily(QString playerTextFontFamily)
@@ -420,6 +440,16 @@ configDartsTable::configDartsTable()
 
 }
 
+void configDartsTable::setWidth(int width)
+{
+    this->width = width;
+}
+
+int configDartsTable::getWidth()
+{
+    return this->width;
+}
+
 void configDartsTable::setFrameColor(QString frameColor)
 {
     this->frameColor = frameColor;
@@ -518,6 +548,16 @@ void configDartsTable::setWireFrameColor(QString wireFrameColor)
 QString configDartsTable::getWireFrameColor()
 {
     return this->wireFrameColor;
+}
+
+void configDartsTable::setPattern(QString pattern)
+{
+    this->pattern = pattern;
+}
+
+QString configDartsTable::getPattern()
+{
+    return this->pattern;
 }
 
 config::config()

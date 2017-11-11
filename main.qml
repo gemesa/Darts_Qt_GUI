@@ -2,22 +2,91 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 
+import "qml"
+
 Window {
     id: mainWindow
+    objectName: "mainWindow"
 
-    visible: true
-    width: 1700
-    height: 1000
-    //visibility: "FullScreen"
-    title: qsTr("Darts")
+    //mainWindow properties
+    property int mainWindowWidth: 1700
+    property int mainWindowHeight: 1000
+    property bool mainWindowFullscreen: false
+    property color mainWindowBackgroundColor: "black"
+
+    // gameModeText properties
+    property int gameModeTextTopPadding: 40
+    property int gameModeTextSidePadding: 450
+    property int gameModeTextWidth: 400
+    property string gameModeTextFontFamily: "Solid Edge Stencil"
+    property int gameModeTextFontSize: 40
+    property color gameModeTextFontColor: "silver"
+    property bool gameModeTextStyleBold: false
+    property bool gameModeTextStyleItalic: false
+
+    // dartCounter properties
+    property int dartCounterWidth: 50
+    property int dartCounterHeight: 150
+    property string dartCounterImage: "qrc:content/images/dartSilhouette.png"
+
+    // mainRowLayout properties
+    property int mainRowLayoutMargins: 40
+    property int mainRowLayoutSpacing: 20
+
+    // scoreBoard properties
+    property int scoreBoardFrameWidth: 20
+    property string scoreBoardFrameImage: "qrc:content/images/scoreBoardFrame.png"
+    property real scoreBoardFrameOpacity: 1
+    property color scoreBoardBackgroundColor: "transparent"
+    property real scoreBoardBackgroundOpacity: 1
+    property int scoreBoardScoreSpacing: 0
+    property int scoreBoardPlayerTextWidth: 150
+    property int scoreBoardPlayerTextHeight: 70
+    property color scoreBoardPlayerTextBackgroundColor: "transparent"
+    property real scoreBoardPlayerTextBackgroundOpacity: 1
+    property string scoreBoardPlayerTextFontFamily: "Solid Edge Stencil"
+    property int scoreBoardPlayerTextFontSize: 24
+    property color scoreBoardPlayerTextFontColor: "white"
+    property int scoreBoardPlayerFillerWidth: 70
+    property color scoreBoardPlayerFillerBackgroundColor: "transparent"
+    property real scoreBoardPlayerFillerBackgroundOpacity: 1
+    property int scoreBoardScoreTextHeight: 50
+    property int scoreBoardScoreTextBorderWidth: 1
+    property color scoreBoardScoreTextBorderColor: "white"
+    property color scoreBoardScoreTextBackgroundColor: "transparent"
+    property real scoreBoardScoreTextBackgroundOpacity: 1
+    property string scoreBoardScoreTextFontFamily: "Solid Edge Stencil"
+    property int scoreBoardScoreTextFontSize: 24
+    property color scoreBoardScoreTextFontColor: "white"
+
+    // dartsTable properties
+    property int dartsTableWidth: 700
+    property color dartsTableFrameColor: "black"
+    property string dartsTableFontFamily: "Solid Edge Stencil"
+    property color dartsTableFontColor: "grey"
+    property color dartsTableDoubleBullsEyeColor: "#D63A22"
+    property color dartsTableBullsEyeColor: "#31994E"
+    property color dartsTableWireFrameColor: "grey"
+    property color dartsTableFirstMultiplierColor: "#D63A22"
+    property color dartsTableSecondMultiplierColor: "#31994E"
+    property color dartsTableFirstSimpleColor: "black"
+    property color dartsTableSecondSimpleColor: "#F2F0B7"
+    property string dartsTablePattern: "qrc:content/images/dartsTablePattern.png"
 
     property int loopVariable: 0
+
+    visible: true
+    width: mainWindowWidth
+    height: mainWindowHeight
+    visibility: mainWindowFullscreen ? "FullScreen" : "Windowed"
+    title: qsTr("Darts")
+
 
     // Main window with background
     MainForm {
         anchors.fill: parent
 
-        color: "black" // ToDo: from config file
+        color: mainWindow.mainWindowBackgroundColor
 
         // ColumnLayout for text and main graphics
         ColumnLayout {
@@ -32,20 +101,23 @@ Window {
                 // Game mode text
                 Text {
                     id: gameModeText
+                    objectName: "gameModeText"
+
                     anchors.horizontalCenter: parent.horizontalCenter
                     // Padding for the space above the text
-                    topPadding: 40 // ToDo: from config file
+                    topPadding: mainWindow.gameModeTextTopPadding
                     // Left and right padding to separate the dart graphics and  to ensure the centering
-                    leftPadding: 450 // ToDo: from config file
-                    rightPadding: 450 // ToDo: from config file
+                    leftPadding: mainWindow.gameModeTextSidePadding
+                    rightPadding: mainWindow.gameModeTextSidePadding
 
                     text: "Game Mode" // ToDo: from actual settings
-                    font.family: "Solid Edge Stencil"
-                    font.pixelSize: 40 // ToDo: from config file
-                    font.bold: true // ToDo: from config file
-                    color: "silver" // ToDo: from config file
+                    font.family: mainWindow.gameModeTextFontFamily
+                    font.pixelSize: mainWindow.gameModeTextFontSize
+                    font.bold: mainWindow.gameModeTextStyleBold
+                    font.italic: mainWindow.gameModeTextStyleItalic
+                    color: mainWindow.gameModeTextFontColor
 
-                    width: 400 // ToDo: from config file
+                    width: mainWindow.gameModeTextWidth
                 }
 
                 RowLayout {
@@ -53,13 +125,17 @@ Window {
                     anchors.left: gameModeText.right
 
                     Item {
-                        width: 50 // ToDo: from config file or calculate
-                        height: 150 // ToDo: from config file or calculate
+                        id: dartCounter0
+                        objectName: "dartCounter0"
 
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart0
-                            source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
+                            objectName: "dart0"
+
+                            source: mainWindow.dartCounterImage
 
                             anchors.fill: parent
                             visible: true
@@ -67,12 +143,17 @@ Window {
                     }
 
                     Item {
-                        width: 50 // ToDo: from config file or calculate
-                        height: 150 // ToDo: from config file or calculate
+                        id: dartCounter1
+                        objectName: "dartCounter1"
+
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart1
-                            source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
+                            objectName: "dart1"
+
+                            source: mainWindow.dartCounterImage
 
                             anchors.fill: parent
                             visible: true
@@ -80,12 +161,17 @@ Window {
                     }
 
                     Item {
-                        width: 50 // ToDo: from config file or calculate
-                        height: 150 // ToDo: from config file or calculate
+                        id: dartCounter2
+                        objectName: "dartCounter2"
+
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart2
-                            source: "images/dart_silhouette_transparent_invert.png" // ToDo: from config file
+                            objectName: "dart2"
+
+                            source: mainWindow.dartCounterImage
 
                             anchors.fill: parent
                             visible: true
@@ -94,21 +180,45 @@ Window {
                 }
             }
 
-            // RowLazout for the main graphics
+            // RowLayout for the main graphics
             RowLayout {
                 id: mainRowLayout
+                objectName: "mainRowLayout"
 
                 anchors.horizontalCenter: parent.horizontalCenter
 
-                property int margins: 40  // ToDo: from config file
+                property int margins: mainWindow.mainRowLayoutMargins
 
-                spacing: 20 // ToDo: from config file
+                spacing: mainWindow.mainRowLayoutSpacing
 
                 ScoreBoard{
                     id: scoreBoard0
+                    objectName: "scoreBoard0"
 
-                    margins: mainRowLayout.margins
-                    font: "Solid Edge Stencil"
+                    frameWidth: mainWindow.scoreBoardFrameWidth
+                    frameImage: mainWindow.scoreBoardFrameImage
+                    frameOpacity: mainWindow.scoreBoardFrameOpacity
+                    backgroundColor: mainWindow.scoreBoardBackgroundColor
+                    backgroundOpacity: mainWindow.scoreBoardBackgroundOpacity
+                    scoreSpacing: mainWindow.scoreBoardScoreSpacing
+                    playerTextWidth: mainWindow.scoreBoardPlayerTextWidth
+                    playerTextHeight: mainWindow.scoreBoardPlayerTextHeight
+                    playerTextBackgroundColor: mainWindow.scoreBoardPlayerTextBackgroundColor
+                    playerTextBackgroundOpacity: mainWindow.scoreBoardPlayerTextBackgroundOpacity
+                    playerTextFontFamily: mainWindow.scoreBoardPlayerTextFontFamily
+                    playerTextFontSize: mainWindow.scoreBoardPlayerTextFontSize
+                    playerTextFontColor: mainWindow.scoreBoardPlayerTextFontColor
+                    playerFillerWidth: mainWindow.scoreBoardPlayerFillerWidth
+                    playerFillerBackgroundColor: mainWindow.scoreBoardPlayerFillerBackgroundColor
+                    playerFillerBackgroundOpacity: mainWindow.scoreBoardPlayerFillerBackgroundOpacity
+                    scoreTextHeight: mainWindow.scoreBoardScoreTextHeight
+                    scoreTextBorderWidth: mainWindow.scoreBoardScoreTextBorderWidth
+                    scoreTextBorderColor: mainWindow.scoreBoardScoreTextBorderColor
+                    scoreTextBackgroundColor: mainWindow.scoreBoardScoreTextBackgroundColor
+                    scoreTextBackgroundOpacity: mainWindow.scoreBoardScoreTextBackgroundOpacity
+                    scoreTextFontFamily: mainWindow.scoreBoardScoreTextFontFamily
+                    scoreTextFontSize: mainWindow.scoreBoardScoreTextFontSize
+                    scoreTextFontColor: mainWindow.scoreBoardScoreTextFontColor
 
                     player1: "Aladár"
                     player2: "Béla"
@@ -129,27 +239,49 @@ Window {
                             y: mainRowLayout.margins
 
                             width: 700 // ToDo: from config file
-                            font: "Solid Edge Stencil" // ToDo: from config file
 
-                            // ToDo: Get the parameters from config file
-
-                //            borderColor: "silver"
-                //            fontColor: "silver"
-                //            bullsEyeColor: "grey"
-                //            doubleBullsEyeColor: "grey"
-                //            firstSimpleColor: "grey"
-                //            firstMultiplierColor: "grey"
-                //            secondSimpleColor: "grey"
-                //            secondMultiplierColor: "grey"
-                //            frameColor: "grey"
+                            frameColor: mainWindow.dartsTableFrameColor
+                            fontFamily: mainWindow.dartsTableFontFamily
+                            fontColor: mainWindow.dartsTableFontColor
+                            doubleBullsEyeColor: mainWindow.dartsTableDoubleBullsEyeColor
+                            bullsEyeColor: mainWindow.dartsTableBullsEyeColor
+                            firstSimpleColor: mainWindow.dartsTableFirstSimpleColor
+                            firstMultiplierColor: mainWindow.dartsTableFirstMultiplierColor
+                            secondSimpleColor: mainWindow.dartsTableSecondSimpleColor
+                            secondMultiplierColor: mainWindow.dartsTableSecondMultiplierColor
+                            wireFrameColor: mainWindow.dartsTableWireFrameColor
+                            pattern: mainWindow.dartsTablePattern
                         }
                 }
 
                 ScoreBoard{
                     id: scoreBoard1
+                    objectName: "scoreBoard1"
 
-                    margins: mainRowLayout.margins
-                    font: "Solid Edge Stencil"
+                    frameWidth: mainWindow.scoreBoardFrameWidth
+                    frameImage: mainWindow.scoreBoardFrameImage
+                    frameOpacity: mainWindow.scoreBoardFrameOpacity
+                    backgroundColor: mainWindow.scoreBoardBackgroundColor
+                    backgroundOpacity: mainWindow.scoreBoardBackgroundOpacity
+                    scoreSpacing: mainWindow.scoreBoardScoreSpacing
+                    playerTextWidth: mainWindow.scoreBoardPlayerTextWidth
+                    playerTextHeight: mainWindow.scoreBoardPlayerTextHeight
+                    playerTextBackgroundColor: mainWindow.scoreBoardPlayerTextBackgroundColor
+                    playerTextBackgroundOpacity: mainWindow.scoreBoardPlayerTextBackgroundOpacity
+                    playerTextFontFamily: mainWindow.scoreBoardPlayerTextFontFamily
+                    playerTextFontSize: mainWindow.scoreBoardPlayerTextFontSize
+                    playerTextFontColor: mainWindow.scoreBoardPlayerTextFontColor
+                    playerFillerWidth: mainWindow.scoreBoardPlayerFillerWidth
+                    playerFillerBackgroundColor: mainWindow.scoreBoardPlayerFillerBackgroundColor
+                    playerFillerBackgroundOpacity: mainWindow.scoreBoardPlayerFillerBackgroundOpacity
+                    scoreTextHeight: mainWindow.scoreBoardScoreTextHeight
+                    scoreTextBorderWidth: mainWindow.scoreBoardScoreTextBorderWidth
+                    scoreTextBorderColor: mainWindow.scoreBoardScoreTextBorderColor
+                    scoreTextBackgroundColor: mainWindow.scoreBoardScoreTextBackgroundColor
+                    scoreTextBackgroundOpacity: mainWindow.scoreBoardScoreTextBackgroundOpacity
+                    scoreTextFontFamily: mainWindow.scoreBoardScoreTextFontFamily
+                    scoreTextFontSize: mainWindow.scoreBoardScoreTextFontSize
+                    scoreTextFontColor: mainWindow.scoreBoardScoreTextFontColor
 
                     player1: "Csaba"
                     player2: "Dániel"
@@ -169,6 +301,11 @@ Window {
         property int durationBetween: 20*duration
 
         running: true
+
+        // Delay to update the config properties
+        PauseAnimation {
+            duration: 1
+        }
 
         ScriptAction {
             script: innerSliceAnimation.start()
@@ -208,6 +345,14 @@ Window {
 
         running: false
         loops: 5
+
+        ScriptAction {
+            script: dartsTable.slices["slice20"].doubleSliceHit()
+        }
+
+        PauseAnimation {
+            duration: startAnimation.duration
+        }
 
         ScriptAction {
             script: dartsTable.slices["slice1"].doubleSliceHit()
@@ -360,14 +505,6 @@ Window {
         PauseAnimation {
             duration: startAnimation.duration
         }
-
-        ScriptAction {
-            script: dartsTable.slices["slice20"].doubleSliceHit()
-        }
-
-        PauseAnimation {
-            duration: startAnimation.duration
-        }
     }
 
     SequentialAnimation {
@@ -375,6 +512,14 @@ Window {
 
         running: false
         loops: 5
+
+        ScriptAction {
+            script: dartsTable.slices["slice20"].outerSliceHit()
+        }
+
+        PauseAnimation {
+            duration: startAnimation.duration
+        }
 
         ScriptAction {
             script: dartsTable.slices["slice1"].outerSliceHit()
@@ -527,14 +672,6 @@ Window {
         PauseAnimation {
             duration: startAnimation.duration
         }
-
-        ScriptAction {
-            script: dartsTable.slices["slice20"].outerSliceHit()
-        }
-
-        PauseAnimation {
-            duration: startAnimation.duration
-        }
     }
 
     SequentialAnimation {
@@ -542,6 +679,14 @@ Window {
 
         running: false
         loops: 5
+
+        ScriptAction {
+            script: dartsTable.slices["slice20"].tripleSliceHit()
+        }
+
+        PauseAnimation {
+            duration: startAnimation.duration
+        }
 
         ScriptAction {
             script: dartsTable.slices["slice1"].tripleSliceHit()
@@ -694,14 +839,6 @@ Window {
         PauseAnimation {
             duration: startAnimation.duration
         }
-
-        ScriptAction {
-            script: dartsTable.slices["slice20"].tripleSliceHit()
-        }
-
-        PauseAnimation {
-            duration: startAnimation.duration
-        }
     }
 
     SequentialAnimation {
@@ -709,6 +846,14 @@ Window {
 
         running: false
         loops: 5
+
+        ScriptAction {
+            script: dartsTable.slices["slice20"].innerSliceHit()
+        }
+
+        PauseAnimation {
+            duration: startAnimation.duration
+        }
 
         ScriptAction {
             script: dartsTable.slices["slice1"].innerSliceHit()
@@ -856,14 +1001,6 @@ Window {
 
         ScriptAction {
             script: dartsTable.slices["slice5"].innerSliceHit()
-        }
-
-        PauseAnimation {
-            duration: startAnimation.duration
-        }
-
-        ScriptAction {
-            script: dartsTable.slices["slice20"].innerSliceHit()
         }
 
         PauseAnimation {

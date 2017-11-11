@@ -6,6 +6,7 @@ class configMainWindow
 {
 public:
     configMainWindow();
+    ~configMainWindow() = default;
 
     void setWidth(int width);
     int getWidth();
@@ -13,15 +14,24 @@ public:
     void setHeight(int height);
     int getHeight();
 
+    void setFullscreen(bool fullscreen);
+    bool getFullscreen();
+
+    void setBackgroundColor(QString backgroundColor);
+    QString getBackgroundColor();
+
 private:
     int width;
     int height;
+    bool fullscreen;
+    QString backgroundColor;
 };
 
 class configGameModeText
 {
 public:
     configGameModeText();
+    ~configGameModeText() = default;
 
     void setTopPadding(int topPadding);
     int getTopPadding();
@@ -62,6 +72,7 @@ class configDartCounter
 {
 public:
     configDartCounter();
+    ~configDartCounter() = default;
 
     void setWidth(int width);
     int getWidth();
@@ -82,6 +93,7 @@ class configMainRowLayout
 {
 public:
     configMainRowLayout();
+    ~configMainRowLayout() = default;
 
     void setMargins(int margins);
     int getMargins();
@@ -98,6 +110,7 @@ class configScoreBoard
 {
 public:
     configScoreBoard();
+    ~configScoreBoard() = default;
 
     void setFrameWidth(int frameWidth);
     int getFrameWidth();
@@ -202,6 +215,10 @@ class configDartsTable
 {
 public:
     configDartsTable();
+    ~configDartsTable() = default;
+
+    void setWidth(int width);
+    int getWidth();
 
     void setFrameColor(QString frameColor);
     QString getFrameColor();
@@ -233,7 +250,11 @@ public:
     void setWireFrameColor(QString wireFrameColor);
     QString getWireFrameColor();
 
+    void setPattern(QString pattern);
+    QString getPattern();
+
 private:
+    int width;
     QString frameColor;
     QString fontFamily;
     QString fontColor;
@@ -244,12 +265,14 @@ private:
     QString firstSimpleColor;
     QString secondSimpleColor;
     QString wireFrameColor;
+    QString pattern;
 };
 
 class config
 {
 public:
     config();
+    ~config() = default;
 
     configMainWindow mainWindow;
     configGameModeText gameModeText;
