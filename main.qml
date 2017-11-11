@@ -99,6 +99,41 @@ Window {
             RowLayout {
                 anchors.horizontalCenter: parent.horizontalCenter
 
+                Grid {
+                    id: buttonsGrid
+                    objectName: "buttonsGrid"
+
+                    anchors.bottom: parent.bottom
+
+                    columns: 2
+                    spacing: 10
+                    leftPadding: 50
+
+                    Button {
+                        width: 150
+
+                        text: "Button 1"
+                    }
+
+                    Button {
+                        width: 150
+
+                        text: "Button 2"
+                    }
+
+                    Button {
+                        width: 150
+
+                        text: "Button 3"
+                    }
+
+                    Button {
+                        width: 150
+
+                        text: "Button 4"
+                    }
+                }
+
                 // Game mode text
                 Text {
                     id: gameModeText
