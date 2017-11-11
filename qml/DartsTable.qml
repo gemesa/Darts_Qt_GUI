@@ -632,8 +632,6 @@ Item {
         anchors.fill: parent
         source: patternImage
         maskSource: dartsFrame
-
-//        opacity: 0.25
     }
 
     // Wires

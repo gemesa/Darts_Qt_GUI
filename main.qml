@@ -128,8 +128,8 @@ Window {
                         id: dartCounter0
                         objectName: "dartCounter0"
 
-                        width: mainWindow.dartCounterWidth
-                        height: mainWindow.dartCounterHeight
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart0
@@ -146,8 +146,8 @@ Window {
                         id: dartCounter1
                         objectName: "dartCounter1"
 
-                        width: mainWindow.dartCounterWidth
-                        height: mainWindow.dartCounterHeight
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart1
@@ -164,8 +164,8 @@ Window {
                         id: dartCounter2
                         objectName: "dartCounter2"
 
-                        width: mainWindow.dartCounterWidth
-                        height: mainWindow.dartCounterHeight
+                        Layout.preferredWidth: mainWindow.dartCounterWidth
+                        Layout.preferredHeight: mainWindow.dartCounterHeight
 
                         Image {
                             id: dart2
@@ -301,6 +301,11 @@ Window {
         property int durationBetween: 20*duration
 
         running: true
+
+        // Delay to update the config properties
+        PauseAnimation {
+            duration: 1
+        }
 
         ScriptAction {
             script: innerSliceAnimation.start()

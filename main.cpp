@@ -139,18 +139,18 @@ void setProperties(const QMLHandlerCppSide &mainWindowQMLObject, config &designC
 
 
     // dartsTable properties
-//    mainWindowQMLObject.object->setProperty("dartsTableWidth",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableFrameColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableFontFamily",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableFontColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableDoubleBullsEyeColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableBullsEyeColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableWireFrameColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableFirstMultiplierColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableSecondMultiplierColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableFirstSimpleColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTableSecondSimpleColor",QVariant());
-//    mainWindowQMLObject.object->setProperty("dartsTablePattern",QVariant());
+    mainWindowQMLObject.object->setProperty("dartsTableWidth",QVariant(designConfig.dartsTable.getWidth()));
+    mainWindowQMLObject.object->setProperty("dartsTableFrameColor",QVariant(designConfig.dartsTable.getFrameColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableFontFamily",QVariant(designConfig.dartsTable.getFontFamily()));
+    mainWindowQMLObject.object->setProperty("dartsTableFontColor",QVariant(designConfig.dartsTable.getFontColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableDoubleBullsEyeColor",QVariant(designConfig.dartsTable.getDoubleBullsEyeColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableBullsEyeColor",QVariant(designConfig.dartsTable.getBullsEyeColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableWireFrameColor",QVariant(designConfig.dartsTable.getWireFrameColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableFirstMultiplierColor",QVariant(designConfig.dartsTable.getFirstMultiplierColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableSecondMultiplierColor",QVariant(designConfig.dartsTable.getSecondMultiplierColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableFirstSimpleColor",QVariant(designConfig.dartsTable.getFirstSimpleColor()));
+    mainWindowQMLObject.object->setProperty("dartsTableSecondSimpleColor",QVariant(designConfig.dartsTable.getSecondSimpleColor()));
+    mainWindowQMLObject.object->setProperty("dartsTablePattern",QVariant(designConfig.dartsTable.getPattern()));
 }
 
 int main(int argc, char *argv[])
