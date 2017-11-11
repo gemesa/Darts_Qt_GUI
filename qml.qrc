@@ -9,10 +9,9 @@
         <file>qml/DartsFullSlice.qml</file>
         <file>qml/DartsNumber.qml</file>
         <file>qml/ScoreBoard.qml</file>
+        <file>content/images/dartsIcon.png</file>
         <file>content/images/dartsTablePattern.png</file>
-        <file>content/images/dart.png</file>
-        <file>content/images/dart_silhouette_transparent.png</file>
-        <file>content/images/dart_silhouette_transparent_invert.png</file>
+        <file>content/images/dartSilhouette.png</file>
         <file>content/images/scoreBoardFrame.png</file>
         <file>config/config.ini</file>
     </qresource>

@@ -1,12 +1,16 @@
 TEMPLATE = app
 
-QT += qml quick
+QT += qml quick \
+    network     \
+    widgets
+
 CONFIG += c++11
 
 INCLUDEPATH += include
 
 SOURCES += main.cpp \
-    src/config.cpp
+    src/config.cpp \
+    src/qmlhandlercppside.cpp
 
 RESOURCES += qml.qrc
 
@@ -33,12 +37,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    include/config.h
+    include/config.h \
+    include/qmlhandlercppside.h
 
 DISTFILES += \
-    content/images/dart.png \
-    content/images/dart_silhouette_transparent.png \
-    content/images/dart_silhouette_transparent_invert.png \
+    content/images/dartsIcon.png \
+    content/images/dartSilhouette.png \
     content/images/dartsTablePattern.png \
     content/images/scoreBoardFrame.png \
     other/scoreBoardCorner.psd \

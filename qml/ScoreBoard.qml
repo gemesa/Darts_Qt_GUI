@@ -70,12 +70,16 @@ Item {
                 // ++++++++++++++++++++++++++++++++++++++++++
                 // +++            Spaceholders            +++
                 // ++++++++++++++++++++++++++++++++++++++++++
-                Rectangle {
+                Item {
                     width: scoreBoard.playerTextWidth
                     height: scoreBoard.playerTextHeight
 
-                    color: scoreBoard.playerTextBackgroundColor
-                    opacity: scoreBoard.playerTextBackgroundOpacity
+                    Rectangle {
+                        anchors.fill: parent
+
+                        color: scoreBoard.playerTextBackgroundColor
+                        opacity: scoreBoard.playerTextBackgroundOpacity
+                    }
 
                     Text {
                         anchors.fill: parent
@@ -98,12 +102,16 @@ Item {
                     opacity: scoreBoard.playerFillerBackgroundOpacity
                 }
 
-                Rectangle {
+                Item {
                     width: scoreBoard.playerTextWidth
                     height: scoreBoard.playerTextHeight
 
-                    color: scoreBoard.playerTextBackgroundColor
-                    opacity: scoreBoard.playerTextBackgroundOpacity
+                    Rectangle {
+                        anchors.fill: parent
+
+                        color: scoreBoard.playerTextBackgroundColor
+                        opacity: scoreBoard.playerTextBackgroundOpacity
+                    }
 
                     Text {
                         anchors.fill: parent
@@ -131,15 +139,19 @@ Item {
                     property string score1Text: ""
                     property int numberOfThrowText: index
 
-                    Rectangle {
+                    Item {
                         width: scoreBoard.playerTextWidth
                         height: scoreBoard.scoreTextHeight
 
-                        border.width: scoreBoard.scoreTextBorderWidth
-                        border.color: scoreBoard.scoreTextBorderColor
+                        Rectangle {
+                            anchors.fill: parent
 
-                        color: scoreBoard.scoreTextBackgroundColor
-                        opacity: scoreBoard.scoreTextBackgroundOpacity
+                            border.width: scoreBoard.scoreTextBorderWidth
+                            border.color: scoreBoard.scoreTextBorderColor
+
+                            color: scoreBoard.scoreTextBackgroundColor
+                            opacity: scoreBoard.scoreTextBackgroundOpacity
+                        }
 
                         Text {
                             id: score0
@@ -155,15 +167,19 @@ Item {
                         }
                     }
 
-                    Rectangle {
+                    Item {
                         width: scoreBoard.playerFillerWidth
                         height: scoreBoard.scoreTextHeight
 
-                        border.width: scoreBoard.scoreTextBorderWidth
-                        border.color: scoreBoard.scoreTextBorderColor
+                        Rectangle {
+                            anchors.fill: parent
 
-                        color: scoreBoard.scoreTextBackgroundColor
-                        opacity: scoreBoard.scoreTextBackgroundOpacity
+                            border.width: scoreBoard.scoreTextBorderWidth
+                            border.color: scoreBoard.scoreTextBorderColor
+
+                            color: scoreBoard.scoreTextBackgroundColor
+                            opacity: scoreBoard.scoreTextBackgroundOpacity
+                        }
 
                         Text {
                             anchors.fill: parent
@@ -178,15 +194,19 @@ Item {
                         }
                     }
 
-                    Rectangle {
+                    Item {
                         width: scoreBoard.playerTextWidth
                         height: scoreBoard.scoreTextHeight
 
-                        border.width: scoreBoard.scoreTextBorderWidth
-                        border.color: scoreBoard.scoreTextBorderColor
+                        Rectangle {
+                            anchors.fill: parent
 
-                        color: scoreBoard.scoreTextBackgroundColor
-                        opacity: scoreBoard.scoreTextBackgroundOpacity
+                            border.width: scoreBoard.scoreTextBorderWidth
+                            border.color: scoreBoard.scoreTextBorderColor
+
+                            color: scoreBoard.scoreTextBackgroundColor
+                            opacity: scoreBoard.scoreTextBackgroundOpacity
+                        }
 
                         Text {
                             id: score1

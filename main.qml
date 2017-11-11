@@ -12,7 +12,7 @@ Window {
     property int mainWindowWidth: 1700
     property int mainWindowHeight: 1000
     property bool mainWindowFullscreen: false
-    property color mainWindowackgroundColor: "black"
+    property color mainWindowBackgroundColor: "black"
 
     // gameModeText properties
     property int gameModeTextTopPadding: 40
@@ -27,7 +27,7 @@ Window {
     // dartCounter properties
     property int dartCounterWidth: 50
     property int dartCounterHeight: 150
-    property string dartCounterImage: "qrc:content/images/dart_silhouette_transparent_invert.png"
+    property string dartCounterImage: "qrc:content/images/dartSilhouette.png"
 
     // mainRowLayout properties
     property int mainRowLayoutMargins: 40
@@ -67,8 +67,8 @@ Window {
     property color dartsTableDoubleBullsEyeColor: "#D63A22"
     property color dartsTableBullsEyeColor: "#31994E"
     property color dartsTableWireFrameColor: "grey"
-    property color dartsTableFirstMultiplierColor: dartsTableDoubleBullsEyeColor
-    property color dartsTableSecondMultiplierColor: dartsTableBullsEyeColor
+    property color dartsTableFirstMultiplierColor: "#D63A22"
+    property color dartsTableSecondMultiplierColor: "#31994E"
     property color dartsTableFirstSimpleColor: "black"
     property color dartsTableSecondSimpleColor: "#F2F0B7"
     property string dartsTablePattern: "qrc:content/images/dartsTablePattern.png"
@@ -86,7 +86,7 @@ Window {
     MainForm {
         anchors.fill: parent
 
-        color: mainWindow.mainWindowackgroundColor
+        color: mainWindow.mainWindowBackgroundColor
 
         // ColumnLayout for text and main graphics
         ColumnLayout {
@@ -130,7 +130,6 @@ Window {
 
                         width: mainWindow.dartCounterWidth
                         height: mainWindow.dartCounterHeight
-
 
                         Image {
                             id: dart0
