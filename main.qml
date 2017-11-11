@@ -1,6 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
+import QtQuick.Controls 2.2
 
 import "qml"
 
@@ -110,7 +111,7 @@ Window {
                     leftPadding: mainWindow.gameModeTextSidePadding
                     rightPadding: mainWindow.gameModeTextSidePadding
 
-                    text: "Game Mode" // ToDo: from actual settings
+                    text: "Game Mode" // TODO: from actual settings
                     font.family: mainWindow.gameModeTextFontFamily
                     font.pixelSize: mainWindow.gameModeTextFontSize
                     font.bold: mainWindow.gameModeTextStyleBold
@@ -224,7 +225,7 @@ Window {
                     player2: "Béla"
                 }
 
-                // Ractangle to ensure the paddings
+                // Rectangle to ensure the paddings
                 Rectangle{
                     width: dartsTable.width + 2*mainRowLayout.margins
                     height: this.width
@@ -238,7 +239,7 @@ Window {
                             x: mainRowLayout.margins
                             y: mainRowLayout.margins
 
-                            width: 700 // ToDo: from config file
+                            width: 700 // TODO: from config file
 
                             frameColor: mainWindow.dartsTableFrameColor
                             fontFamily: mainWindow.dartsTableFontFamily
