@@ -14,5 +14,6 @@
         <file>content/images/dartSilhouette.png</file>
         <file>content/images/scoreBoardFrame.png</file>
         <file>config/config.ini</file>
+        <file>qml/SettingsWindow.qml</file>
     </qresource>
 </RCC>

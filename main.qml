@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 
+// To use qml files under qml folder
 import "qml"
 
 Window {
@@ -83,6 +84,12 @@ Window {
     title: qsTr("Darts")
 
 
+    SettingsWindow {
+        id: settingsWindow
+
+        visible: false
+    }
+
     // Main window with background
     MainForm {
         anchors.fill: parent
@@ -103,34 +110,54 @@ Window {
                     id: buttonsGrid
                     objectName: "buttonsGrid"
 
-                    anchors.bottom: parent.bottom
+                    anchors.verticalCenter: parent.verticalCenter
 
                     columns: 2
-                    spacing: 10
-                    leftPadding: 50
+                    spacing: 10 // TODO: from config file
+                    leftPadding: 50 // TODO: from config file
 
                     Button {
-                        width: 150
+                        id: optionsButton
 
-                        text: "Button 1"
+                        width: 150 // TODO: from config file
+
+                        text: qsTr("Beállítások") // TODO: from translation file
+
+                        font.pixelSize: 15 // TODO: from config file
+
+                        onClicked: {
+                            settingsWindow.visible = true
+                        }
                     }
 
                     Button {
-                        width: 150
+                        id: startButton
 
-                        text: "Button 2"
+                        width: 150 // TODO: from config file
+
+                        text: qsTr("Játék indítása") // TODO: from translation file
+
+                        font.pixelSize: 15 // TODO: from config file
                     }
 
                     Button {
-                        width: 150
+                        id: missButton
 
-                        text: "Button 3"
+                        width: 150 // TODO: from config file
+
+                        text: qsTr("Mellé")
+
+                        font.pixelSize: 15 // TODO: from config file
                     }
 
                     Button {
-                        width: 150
+                        id: reverseButton
 
-                        text: "Button 4"
+                        width: 150 // TODO: from config file
+
+                        text: qsTr("Dobás visszavonása")
+
+                        font.pixelSize: 15 // TODO: from config file
                     }
                 }
 
@@ -140,6 +167,7 @@ Window {
                     objectName: "gameModeText"
 
                     anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
                     // Padding for the space above the text
                     topPadding: mainWindow.gameModeTextTopPadding
                     // Left and right padding to separate the dart graphics and  to ensure the centering
@@ -333,10 +361,22 @@ Window {
     SequentialAnimation {
         id: startAnimation
 
-        property int duration: 30
-        property int durationBetween: 20*duration
+        property int duration: 30 // TODO: from config file
+        property int durationBetween: 20*duration // TODO: from config file
 
         running: true
+
+        // Disable the buttons
+        ScriptAction {
+            script: {
+                optionsButton.enabled = false
+                startButton.enabled = false
+                missButton.enabled = false
+                reverseButton.enabled = false
+
+                settingsWindow.visible = false
+            }
+        }
 
         // Delay to update the config properties
         PauseAnimation {
@@ -371,8 +411,19 @@ Window {
             script: doubleSliceAnimation.start()
         }
 
+        //
         PauseAnimation {
-            duration: startAnimation.durationBetween
+            duration: startAnimation.durationBetween*(doubleSliceAnimation.loops+1)
+        }
+
+        // Enable the buttons
+        ScriptAction {
+            script: {
+                optionsButton.enabled = true
+                startButton.enabled = true
+                missButton.enabled = true
+                reverseButton.enabled = true
+            }
         }
     }
 
