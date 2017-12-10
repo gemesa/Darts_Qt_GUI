@@ -15,5 +15,7 @@
         <file>content/images/scoreBoardFrame.png</file>
         <file>config/config.ini</file>
         <file>qml/SettingsWindow.qml</file>
+        <file>qml/PlayerTextEdit.qml</file>
+        <file>qml/GameModeRadioButton.qml</file>
     </qresource>
 </RCC>

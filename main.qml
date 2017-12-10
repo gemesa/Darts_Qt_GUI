@@ -284,8 +284,8 @@ Window {
                     scoreTextFontSize: mainWindow.scoreBoardScoreTextFontSize
                     scoreTextFontColor: mainWindow.scoreBoardScoreTextFontColor
 
-                    player1: "Aladár"
-                    player2: "Béla"
+                    player1: "Alice"
+                    player2: "Barbara"
                 }
 
                 // Rectangle to ensure the paddings
@@ -347,8 +347,8 @@ Window {
                     scoreTextFontSize: mainWindow.scoreBoardScoreTextFontSize
                     scoreTextFontColor: mainWindow.scoreBoardScoreTextFontColor
 
-                    player1: "Csaba"
-                    player2: "Dániel"
+                    player1: "Catherine"
+                    player2: "Daysi"
                 }
             }
         }
@@ -364,7 +364,7 @@ Window {
         property int duration: 30 // TODO: from config file
         property int durationBetween: 20*duration // TODO: from config file
 
-        running: true
+        //running: true
 
         // Disable the buttons
         ScriptAction {
@@ -416,7 +416,7 @@ Window {
             duration: startAnimation.durationBetween*(doubleSliceAnimation.loops+1)
         }
 
-        // Enable the buttons
+        // Enable the buttons. Workaround for avoid freezing.
         ScriptAction {
             script: {
                 optionsButton.enabled = true
