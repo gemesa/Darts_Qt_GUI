@@ -142,7 +142,6 @@ void setProperties(const QMLHandlerCppSide &mainWindowQMLObject, config &designC
     mainWindowQMLObject.object->setProperty("scoreBoardScoreTextFontSize",             QVariant(designConfig.scoreBoard.getScoreTextFontSize()));
     mainWindowQMLObject.object->setProperty("scoreBoardScoreTextFontColor",            QVariant(designConfig.scoreBoard.getScoreTextFontColor()));
 
-
     // dartsTable properties
     mainWindowQMLObject.object->setProperty("dartsTableWidth",                 QVariant(designConfig.dartsTable.getWidth()));
     mainWindowQMLObject.object->setProperty("dartsTableFrameColor",            QVariant(designConfig.dartsTable.getFrameColor()));
