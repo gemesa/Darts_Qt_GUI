@@ -12,6 +12,11 @@
 // Read the configurations and save them into an instantiation of config object
 void getConfigurations(config &designConfig, QSettings &settings)
 {
+    // .png resources
+    const char dartSilhouette[] =    "qrc:content/images/dartSilhouette.png";
+    const char scoreBoardFrame[] =   "qrc:content/images/scoreBoardFrame.png";
+    const char dartsTablePattern[] = "qrc:content/images/dartsTablePattern.png";
+
     settings.beginGroup("mainWindow");
     designConfig.mainWindow.setWidth(settings.value("width", 1700).toInt());
     designConfig.mainWindow.setHeight(settings.value("height", 1000).toInt());
@@ -33,7 +38,7 @@ void getConfigurations(config &designConfig, QSettings &settings)
     settings.beginGroup("dartCounter");
     designConfig.dartCounter.setWidth(settings.value("width", 50).toInt());
     designConfig.dartCounter.setHeight(settings.value("height", 150).toInt());
-    designConfig.dartCounter.setImage(settings.value("image", "qrc:content/images/dartSilhouette.png").toString());
+    designConfig.dartCounter.setImage(settings.value("image", dartSilhouette).toString());
     settings.endGroup();
 
     settings.beginGroup("mainRowLayout");
@@ -43,7 +48,7 @@ void getConfigurations(config &designConfig, QSettings &settings)
 
     settings.beginGroup("scoreBoard");
     designConfig.scoreBoard.setFrameWidth(settings.value("frameWidth", 20).toInt());
-    designConfig.scoreBoard.setFrameImage(settings.value("frameImage", "qrc:content/images/scoreBoardFrame.png").toString());
+    designConfig.scoreBoard.setFrameImage(settings.value("frameImage", scoreBoardFrame).toString());
     designConfig.scoreBoard.setFrameOpacity(settings.value("frameOpacity", 1).toFloat());
     designConfig.scoreBoard.setBackgroundColor(settings.value("backgroundColor", "transparent").toString());
     designConfig.scoreBoard.setBackgroundOpacity(settings.value("backgroundOpacity", 1).toFloat());
@@ -79,7 +84,7 @@ void getConfigurations(config &designConfig, QSettings &settings)
     designConfig.dartsTable.setFirstSimpleColor(settings.value("firstSimpleColor", "black").toString());
     designConfig.dartsTable.setSecondSimpleColor(settings.value("secondSimpleColor", "#F2F0B7").toString());
     designConfig.dartsTable.setWireFrameColor(settings.value("wireFrameColor", "grey").toString());
-    designConfig.dartsTable.setPattern(settings.value("pattern", "qrc:content/images/dartsTablePattern.png").toString());
+    designConfig.dartsTable.setPattern(settings.value("pattern", dartsTablePattern).toString());
     settings.endGroup();
 }
 
